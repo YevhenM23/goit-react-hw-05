@@ -4,7 +4,6 @@ import { fetchMovieDetails } from "../../services/api";
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
-  console.log(movieId);
 
   const [film, setFilm] = useState(null);
 
@@ -45,9 +44,9 @@ const MovieDetailsPage = () => {
           </li>
         </ul>
       </nav>
-      {/* <div>
+      <div>
         <Outlet />
-      </div> */}
+      </div>
     </div>
   );
 };
