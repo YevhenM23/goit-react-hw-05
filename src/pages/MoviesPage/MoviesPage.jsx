@@ -3,6 +3,7 @@ import SearchForm from "../../components/SearchForm/SearchForm";
 import { NavLink, useLocation, useSearchParams } from "react-router-dom";
 import { fetchMoviesByQuery } from "../../services/api";
 import { MdOutlineImageNotSupported } from "react-icons/md";
+import s from "./MoviesPage.module.css";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
@@ -43,10 +44,10 @@ const MoviesPage = () => {
       <SearchForm handleChangeQuery={handleChangeQuery} query={query} />
       {loading && <p>Loading...</p>}
       {movies.length > 0 ? (
-        <ul>
+        <ul className={s.filmList}>
           {movies.map((movie) => (
-            <li key={movie.id}>
-              <h2>
+            <li className={s.filmItem} key={movie.id}>
+              <h2 className={s.filmTitle}>
                 <NavLink to={`/movies/${movie.id}`} state={{ from: location }}>
                   {movie.title}
                 </NavLink>
@@ -54,6 +55,7 @@ const MoviesPage = () => {
               <NavLink to={`/movies/${movie.id}`} state={{ from: location }}>
                 {movie.poster_path ? (
                   <img
+                    className={s.filmPoster}
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     alt={movie.title}
                   />

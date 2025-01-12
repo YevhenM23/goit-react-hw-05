@@ -1,0 +1,72 @@
+.detailsPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detailsPage a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.detailsPage a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.detailsPoster {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.detailsTitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333;
+}
+
+.detailsRelease,
+.detailsRating,
+.detailsVote,
+.detailsOverview {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.detailsOverview {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.detailsList {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.detailsLink a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detailsLink a:hover {
+  color: #0056b3;
+}

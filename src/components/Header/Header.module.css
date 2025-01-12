@@ -1,12 +1,29 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(245, 245, 220, 0.3);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .link {
   color: black;
   font-size: 26px;
   text-decoration: none;
+  margin-right: 20px;
 }
+
 .nav {
   display: flex;
   gap: 20px;
 }
+
 .active {
   color: green;
   text-decoration: underline;
