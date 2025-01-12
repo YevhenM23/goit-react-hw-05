@@ -2,6 +2,9 @@ import { Field, Form, Formik } from "formik";
 
 const SearchForm = ({ handleChangeQuery, query }) => {
   const onSubmit = (values) => {
+    if (values.query === "") {
+      alert("Please enter a valid movie name.");
+    }
     handleChangeQuery(values.query);
   };
 
@@ -22,30 +25,3 @@ const SearchForm = ({ handleChangeQuery, query }) => {
 };
 
 export default SearchForm;
-
-/* //   const
-//   const [searchParams, setSearchParams] = useSearchParams();
-//   const query = searchParams.get("query") ?? "";
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     if (query.trim() === "") {
-//       alert("Please enter a valid movie name.");
-//       return;
-//     } else onSearch(query);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <input
-//         type="text"
-//         value={query}
-//         onChange={(e) => setSearchParams({ query: e.target.value })}
-//         placeholder="Search for a movie"
-//       />
-//       <button type="submit">Search Movie</button>
-//     </form>
-//   );
-// };
-
-// export default SearchForm; */

@@ -17,6 +17,28 @@ export const fetchMovieDetails = async (movieId) => {
 };
 
 export const fetchMoviesByQuery = async (query) => {
-  const { data } = await axios.get(`/3/search/movie/?api_key=${API_KEY}&query=${query}`);
+  if (!query || query.trim() === "") {
+    throw new Error("Query cannot be empty");
+  }
+  const { data } = await axios.get(`/3/search/movie?api_key=${API_KEY}&query=${query}`);
   return data.results;
+};
+
+export const fetchCast = async (movieId) => {
+  if (!movieId) {
+    throw new Error("Movie ID is required");
+  }
+  const { data } = await axios.get(`/3/movie/${movieId}/credits?api_key=${API_KEY}`);
+
+  return data.cast || [];
+};
+
+export const fetchReviews = async (movieId) => {
+  if (!movieId) {
+    throw new Error("Movie ID is required");
+  }
+  const { data } = await axios.get(`/3/movie/${movieId}/reviews?api_key=${API_KEY}`);
+  console.log(data.results);
+
+  return data.results || [];
 };
