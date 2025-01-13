@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
-import s from "./TrendMovies.module.css";
+import s from "./MovieList.module.css";
 
-const TrendMovies = ({ movies }) => {
+const MovieList = ({ movies }) => {
   const location = useLocation();
   return (
     <ul className={s.movieGallery}>
@@ -25,4 +25,4 @@ const TrendMovies = ({ movies }) => {
   );
 };
 
-export default TrendMovies;
+export default MovieList;
