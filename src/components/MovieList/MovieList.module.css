@@ -20,7 +20,7 @@
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  background-color: #fff;
+  background: linear-gradient(to right, #ffffff, #f8f8f8, #eaeaea);
 }
 
 .movieItem:hover {
@@ -30,14 +30,18 @@
 
 .movieTitle {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 900;
   margin: 10px 0;
   color: #333;
   text-decoration: none;
 }
 
+.titleMovie {
+  color: #333;
+}
+
 .movieTitle a:hover {
-  color: #007bff;
+  color: blue;
 }
 
 .moviePoster {
@@ -46,4 +50,21 @@
   border-bottom: 1px solid #ddd;
   object-fit: cover;
   aspect-ratio: 2 / 3;
+}
+
+.ratingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.ratingIcon {
+  color: orange;
+}
+
+.rating {
+  margin: 0px 5px;
+  font-weight: 500;
+  color: #333;
 }

@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import s from "./MovieList.module.css";
+import { BiBarChartAlt } from "react-icons/bi";
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -8,7 +9,7 @@ const MovieList = ({ movies }) => {
       {movies.map((movie) => (
         <li className={s.movieItem} key={movie.id}>
           <h2 className={s.movieTitle}>
-            <NavLink to={`/movies/${movie.id}`} state={{ from: location }}>
+            <NavLink className={s.titleMovie} to={`/movies/${movie.id}`} state={{ from: location }}>
               {movie.title}
             </NavLink>
           </h2>
@@ -19,6 +20,10 @@ const MovieList = ({ movies }) => {
               alt={movie.title}
             />
           </NavLink>
+          <div className={s.ratingWrapper}>
+            <BiBarChartAlt className={s.ratingIcon} />
+            <p className={s.rating}>{movie.vote_average}</p>
+          </div>
         </li>
       ))}
     </ul>

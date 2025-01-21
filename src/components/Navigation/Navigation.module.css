@@ -1,16 +1,48 @@
-.link {
-  color: black;
-  font-size: 26px;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-.nav {
+.navMenu {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
 }
 
-.active {
-  color: green;
-  text-decoration: underline;
+.navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #f64f59, #c471ed);
+  transition: background-color 0.3s ease-in-out;
+  color: rgb(244, 243, 243);
+  text-decoration: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 7px;
+  padding-bottom: 3px;
+}
+
+.activeLink {
+  background-image: linear-gradient(to right, #80f532, #ebf2e7);
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 7px;
+  padding-bottom: 3px;
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+/* .linkWrapper:active {
+  background-image: linear-gradient(to left, #f64f59, #c471ed);
+} */
+
+.iconsWrapper {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
