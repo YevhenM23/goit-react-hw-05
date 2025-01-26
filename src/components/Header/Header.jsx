@@ -5,13 +5,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <a href="/" style={{ display: "inline-block", textDecoration: "none" }}>
-        <img
-          src="/src/logo.svg/logomak_logo.png"
-          alt="logo: filmec"
-          width={90}
-          height={60}
-          className={s.logo}
-        />
+        <img src="/logomak_logo.png" alt="logo: filmec" width={90} height={60} className={s.logo} />
       </a>
       <Navigation />
     </header>
