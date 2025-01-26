@@ -6,7 +6,7 @@ const Header = () => {
     <header className={s.header}>
       <a href="/" style={{ display: "inline-block", textDecoration: "none" }}>
         <img
-          src="/src/components/logomak_logo.png"
+          src="/src/logo.svg/logomak_logo.png"
           alt="logo: filmec"
           width={90}
           height={60}
