@@ -2,7 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import s from "./MovieList.module.css";
 import { BiBarChartAlt } from "react-icons/bi";
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies = [] }) => {
   const location = useLocation();
   return (
     <ul className={s.movieGallery}>
