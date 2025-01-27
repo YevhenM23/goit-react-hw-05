@@ -23,6 +23,15 @@ const Navigation = () => {
           Movies
         </div>
       </NavLink>
+      <NavLink
+        className={({ isActive }) => clsx(css.navLink, isActive && css.activeLink)}
+        to="/by-rating"
+      >
+        <div className={css.linkWrapper}>
+          <RiMovie2Fill className={css.iconsWrapper} />
+          By Rating
+        </div>
+      </NavLink>
     </nav>
   );
 };

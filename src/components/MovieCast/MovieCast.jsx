@@ -38,7 +38,7 @@ const MovieCast = () => {
               className={s.castPhoto}
               src={
                 actor.profile_path
-                  ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
+                  ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
                   : "https://via.placeholder.com/200x300?text=No+Image"
               }
               alt={actor.name}

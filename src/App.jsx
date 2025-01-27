@@ -9,6 +9,7 @@ const MovieReviews = lazy(() => import("./components/MovieReviews/MovieReviews")
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 const Header = lazy(() => import("./components/Header/Header"));
+const ByRatingPage = lazy(() => import("./pages/ByRatingPage/ByRatingPage"));
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/by-rating" element={<ByRatingPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
             <Route path="cast" element={<MovieCast />} />
             <Route path="reviews" element={<MovieReviews />} />
