@@ -2,8 +2,14 @@ import { NavLink, useLocation } from "react-router-dom";
 import s from "./MovieList.module.css";
 import { BiBarChartAlt } from "react-icons/bi";
 
-const MovieList = ({ movies = [] }) => {
+const MovieList = ({ movies }) => {
   const location = useLocation();
+
+  if (!Array.isArray(movies)) {
+    console.error("Expected movies to be an array, got:", movies);
+    return <p>No movies available</p>;
+  }
+
   return (
     <ul className={s.movieGallery}>
       {movies.map((movie) => (

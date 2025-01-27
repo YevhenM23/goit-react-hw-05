@@ -10,7 +10,7 @@ const ByRatingPage = () => {
     const getMoviesByRating = async () => {
       try {
         const moviesByRating = await fetchMoviesByRating();
-        setMovies(moviesByRating.results || []);
+        if (Array.isArray(moviesByRating)) setMovies(moviesByRating);
       } catch (error) {
         console.error("Failed to fetch movies by rating", error);
       }

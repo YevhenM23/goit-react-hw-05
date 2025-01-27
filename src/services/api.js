@@ -23,10 +23,14 @@ export const fetchMoviesByQuery = async (query) => {
 };
 
 export const fetchMoviesByRating = async () => {
-  const { data } = await axios.get(`/api/movie/top_rated?api_key=${API_KEY}`);
-  console.log(data);
-
-  return data;
+  try {
+    const { data } = await axios.get(`/api/movie/top_rated?api_key=${API_KEY}`);
+    console.log("API Response:", data.results);
+    return data.results;
+  } catch (error) {
+    console.error("Failed to fetch movies by rating:", error);
+    return [];
+  }
 };
 
 export const fetchCast = async (movieId) => {
