@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // https: true,
       "/api": {
         target: "https://api.themoviedb.org/3",
         changeOrigin: true,
