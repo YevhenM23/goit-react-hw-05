@@ -24,9 +24,9 @@ export const fetchMoviesByQuery = async (query) => {
 
 export const fetchMoviesByRating = async () => {
   const { data } = await axios.get(`/api/movie/top_rated?api_key=${API_KEY}`);
-  console.log(data.results);
+  console.log(data);
 
-  return data.results;
+  return data;
 };
 
 export const fetchCast = async (movieId) => {
