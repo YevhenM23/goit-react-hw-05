@@ -11,7 +11,7 @@ const ByRatingPage = () => {
       const moviesByRating = await fetchMoviesByRating();
       console.log(moviesByRating.results);
 
-      setMovies(moviesByRating.results || []);
+      setMovies(moviesByRating);
     };
     getMoviesByRating();
   }, []);
